@@ -8,5 +8,8 @@ axios_1.default.get(url).then(function (response) {
     var id = todo.id;
     var title = todo.title;
     var completed = todo.completed;
-    console.log("\n      ID        = ".concat(id, "\n      Title     = ").concat(title, "\n      Completed = ").concat(completed, "\n   "));
+    logging(id, title, completed);
 });
+var logging = function (id, title, completed) {
+    console.log("\n      ID        = ".concat(id, "\n      Title     = ").concat(title, "\n      Completed = ").concat(completed, "\n   "));
+};
