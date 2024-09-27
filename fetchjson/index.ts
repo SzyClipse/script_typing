@@ -1,6 +1,14 @@
-const hello: string = "Hello"
-const world: string = "World"
+import axios from "axios"
 
-var hello_world: string = hello + " " + world + "!"
+const url = "https://jsonplaceholder.typicode.com/todos/1"
 
-console.log(' -> ' + hello_world)
+interface Todo {
+   id: number
+   title: string
+   completed: boolean
+}
+
+axios.get(url).then(response => {
+   console.log("First entry from given API is:")
+   console.log(response.data)
+})

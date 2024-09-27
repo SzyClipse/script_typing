@@ -1,4 +1,8 @@
-var hello = "Hello";
-var world = "World";
-var hello_world = hello + " " + world + "!";
-console.log(' -> ' + hello_world);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var axios_1 = require("axios");
+var url = "https://jsonplaceholder.typicode.com/todos/1";
+axios_1.default.get(url).then(function (response) {
+    console.log("First entry from given API is:");
+    console.log(response.data);
+});
